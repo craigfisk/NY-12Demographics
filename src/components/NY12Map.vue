@@ -1,5 +1,6 @@
 <template>
   <div class="map-container">
+    <div class="courtesy">Courtesy of <a href="http://varelaforcongress.com" target="_blank" rel="noopener">varelaforcongress.com</a></div>
     <div v-if="loading" class="loading">Loading map…</div>
     <div v-if="error" class="error">{{ error }}</div>
 
@@ -300,6 +301,17 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   font-family: sans-serif;
+}
+
+.courtesy {
+  align-self: flex-start;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.courtesy a {
+  color: #888;
 }
 
 .controls {
